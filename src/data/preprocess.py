@@ -34,7 +34,7 @@ def build_index(raw_dir: Path, aliases: dict | None = None) -> pd.DataFrame:
         raise FileNotFoundError(f"Nenhuma imagem encontrada em {raw_dir}")
     return pd.DataFrame(rows)
 
-    _POPCOUNT = np.array([bin(i).count("1") for i in range(256)], dtype=np.uint8)
+_POPCOUNT = np.array([bin(i).count("1") for i in range(256)], dtype=np.uint8)
 
 
 def dhash(path: Path, hash_size: int = 8) -> np.ndarray:
