@@ -1,0 +1,24 @@
+# Deep learning (CPU)
+torch
+torchvision
+
+# Dados e imagens
+numpy
+pandas
+pillow
+opencv-python
+
+# Treino / avaliação
+scikit-learn
+tqdm
+
+# Visualização
+matplotlib
+seaborn
+
+# Configuração
+pyyaml
+
+# Notebooks
+jupyter
+ipykernel
