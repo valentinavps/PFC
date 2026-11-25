@@ -1,0 +1,42 @@
+seed: 42
+
+paths:
+  raw_dir: data/raw
+  processed_dir: data/processed
+  checkpoints_dir: outputs/checkpoints
+  results_dir: outputs/results
+
+scenario: A
+
+classes:
+  A: [cracks, flakings, shellings, spallings, squats]
+  B: [cracks, flakings, shellings, spallings, squats, joints, grooves]
+
+image_size: 224
+
+training:
+  model: resnet18
+  pretrained: true
+  freeze_backbone: false
+  epochs: 30
+  batch_size: 32
+  lr: 0.0001
+  weight_decay: 0.0001
+  patience: 6
+  num_workers: 2
+  class_weights: true
+  oversample: false
+
+augmentation:
+  hflip: true
+  vflip: true
+  rotation_deg: 10
+  brightness: 0.2
+  contrast: 0.2
+
+classical:
+  models: [majority, svm, random_forest]
+  hog_cell: 16
+  lbp_points: 8
+  lbp_radius: 1
+  feature_size: 128
