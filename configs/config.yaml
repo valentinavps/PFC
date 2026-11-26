@@ -17,7 +17,7 @@ image_size: 224
 split:
   test_size: 0.20
   n_folds: 5
-  dedup_threshold: 1
+  dedup_threshold: 2
   hash_size: 8
 
 training:
@@ -41,7 +41,7 @@ augmentation:
   contrast: 0.2
 
 classical:
-  models: [majority, svm, random_forest]
+  models: [majority, svm]
   hog_cell: 16
   lbp_points: 8
   lbp_radius: 1
